@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Bowlby+One&family=Noto+Sans+JP:wght@500;700;900&display=swap');
+
+html, body {
+  margin: 0;
+  background: #F8E7CF;
+  color: #1a120b;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: 'Bowlby One', 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.01em;
+}
+.font-serif-display {
+  font-family: 'Fraunces', 'Times New Roman', serif;
+  font-style: italic;
+}
+.font-jp {
+  font-family: 'Noto Sans JP', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* selection */
+::selection { background: #C45A33; color: #FFF1DD; }
+
+/* layered backdrop with japanese chars + soft sun */
+.bg-canvas {
+  background:
+    radial-gradient(900px 700px at 90% 8%, #F2C99E 0%, rgba(242,201,158,0) 60%),
+    radial-gradient(600px 500px at 0% 100%, #F1C39D 0%, rgba(241,195,157,0) 60%),
+    linear-gradient(180deg, #FBEFD8 0%, #F6E2C4 100%);
+}
+
+.bg-soft-section {
+  background: linear-gradient(180deg, #F8E7CF 0%, #F4DDBF 100%);
+}
+
+.brand-rust { color: #C45A33; }
+.bg-rust { background: #B85B36; }
+.bg-rust-2 { background: #C45A33; }
+.border-rust { border-color: #C45A33; }
+
+/* sun ornament */
+.sun-orb {
+  position: absolute;
+  width: 320px; height: 320px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 35% 35%, #F2BE8E 0%, #EAA871 55%, #E29F65 100%);
+  filter: blur(0.5px);
+  opacity: 0.7;
+}
+
+/* faint kana watermark */
+.kana-watermark {
+  position: absolute;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 900;
+  color: #DDB78A;
+  opacity: 0.35;
+  pointer-events: none;
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* corner kanji decoration lines */
+.deco-lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.deco-lines::before,
+.deco-lines::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #D1A77A, transparent);
+}
+.deco-lines::before { top: 18%; right: -40px; transform: rotate(-18deg); }
+.deco-lines::after  { bottom: 14%; right: -40px; transform: rotate(14deg); }
+
+.nft-card {
+  border-radius: 22px;
+  box-shadow: 0 22px 50px -18px rgba(80, 36, 12, 0.35), 0 6px 18px -8px rgba(80, 36, 12, 0.25);
+  transition: transform 600ms cubic-bezier(.2,.7,.2,1), box-shadow 400ms;
+  overflow: hidden;
+  background: #fff;
+}
+.nft-fan {
+  position: relative;
+  width: 460px;
+  height: 460px;
+}
+.nft-fan .nft-card {
+  position: absolute;
+  width: 240px; height: 280px;
+}
+.nft-fan .c1 { left: 0; top: 60px; transform: rotate(-14deg); background:#E9F0CB; }
+.nft-fan .c2 { left: 200px; top: 110px; transform: rotate(0deg); background:#F2C8A6; z-index: 3; }
+.nft-fan .c3 { left: 180px; top: 90px; transform: rotate(12deg); background:#16223A; z-index: 1; }
+.nft-fan:hover .c1 { transform: rotate(-18deg) translateY(-6px); }
+.nft-fan:hover .c2 { transform: rotate(0deg) translateY(-12px) scale(1.03); }
+.nft-fan:hover .c3 { transform: rotate(16deg) translateY(-6px); }
+
+.btn-press {
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+.btn-press:active { transform: translateY(1px) scale(0.99); }
+
+/* arrow bounce */
+@keyframes bounceY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+.bounce-y { animation: bounceY 1.8s ease-in-out infinite; }
+
+/* pulse dot */
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(74,189,107,0.6); }
+  50% { box-shadow: 0 0 0 8px rgba(74,189,107,0); }
+}
+.pulse-dot { animation: pulseDot 1.8s ease-out infinite; }
+
+/* subtle fade-up on scroll-into-view (simple) */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 700ms cubic-bezier(.2,.7,.2,1) both; }
+
+/* faq panel */
+.faq-item {
+  border: 1px solid rgba(196,90,51,0.25);
+  background: rgba(255, 235, 209, 0.55);
+  border-radius: 14px;
+  transition: background 220ms, border-color 220ms, transform 220ms;
+}
+.faq-item:hover { background: rgba(255, 235, 209, 0.85); border-color: rgba(196,90,51,0.5); }
+.faq-item[data-open="true"] { background: rgba(255, 235, 209, 0.95); }
+
+@layer base {
+  :root {
+    --background: 34 60% 89%;
+    --foreground: 24 40% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 24 40% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 40% 12%;
+    --primary: 18 60% 49%;
+    --primary-foreground: 36 60% 96%;
+    --secondary: 30 40% 90%;
+    --secondary-foreground: 24 40% 12%;
+    --muted: 30 30% 90%;
+    --muted-foreground: 24 10% 35%;
+    --accent: 30 40% 88%;
+    --accent-foreground: 24 40% 12%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 26 35% 80%;
+    --input: 26 35% 80%;
+    --ring: 18 60% 49%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+}
