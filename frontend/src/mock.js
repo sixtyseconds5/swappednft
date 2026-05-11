@@ -17,7 +17,7 @@ export const coverImage =
 
 // Teaser video (under synopsis)
 export const teaserVideo =
-  "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/3ckoww7z_VN20260511_221407.mp4";
+  "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/ljbn0iue_VN20260511_232941.mp4";
 
 export const heroTagline = "Characters from the Netflix film story";
 
@@ -118,11 +118,11 @@ export const faqs = [
   },
   {
     q: "What is the mint price?",
-    a: "Mint price is 0.001 ETH per NFT. Plus standard Ethereum gas fees. Maximum 2 mints per wallet during the WL window.",
+    a: "Mint price is tiered based on your access:\n\n\u2022 0.0005 ETH for GTD (Guaranteed)\n\u2022 0.001 ETH for FCFS (First Come, First Served)\n\u2022 0.001 ETH for PUBLIC\n\nMaximum 2 mints per wallet during the WL window. Plus standard Ethereum gas fees.",
   },
   {
     q: "How will the WL distribution work?",
-    a: "WL Distribution (333 Supply)\n\u2022 33 spots reserved for the team and treasury\n\u2022 100 spots for OG holders (GTD)\n\u2022 200 spots FCFS (first come, first served)",
+    a: "WL Distribution (333 Supply)\n\u2022 3 spots reserved for the team and treasury\n\u2022 100 spots for GTD\n\u2022 230 spots FCFS (first come, first served)",
   },
   {
     q: "When is the mint date?",
