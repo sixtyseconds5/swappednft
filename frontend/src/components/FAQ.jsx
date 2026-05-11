@@ -6,19 +6,17 @@ const FAQ = () => {
   const [open, setOpen] = useState(null);
   return (
     <section className="relative bg-canvas overflow-hidden">
-      <div className="kana-watermark text-[18vw] md:text-[12vw] leading-none" style={{ top: "6%", left: "-3%" }}>
-        質問
-      </div>
+      <div className="leaf-overlay" />
       <div className="max-w-4xl mx-auto px-6 md:px-10 py-24 md:py-28 relative">
         <div className="text-center">
-          <div className="text-[12px] tracking-[0.32em] font-bold text-amber-brand mb-3">QUESTIONS</div>
+          <div className="text-[12px] tracking-[0.32em] font-bold text-amber-warm mb-3">QUESTIONS</div>
           <h2
-            className="font-serif-display brand-forest"
+            className="font-serif-display brand-cream"
             style={{ fontSize: "clamp(64px, 9vw, 130px)", lineHeight: 0.95 }}
           >
             FAQ
           </h2>
-          <p className="text-[#3a3a25] mt-3 text-sm md:text-base tracking-wide">
+          <p className="mt-3 text-sm md:text-base tracking-wide" style={{ color: "#D9CFA8" }}>
             Everything you need to know about Swapped Character
           </p>
         </div>
@@ -32,10 +30,10 @@ const FAQ = () => {
                   onClick={() => setOpen(isOpen ? null : idx)}
                   className="w-full flex items-center justify-between px-5 md:px-6 py-4 md:py-5 text-left"
                 >
-                  <span className="font-extrabold text-[15px] md:text-[16px] brand-forest">{f.q}</span>
+                  <span className="font-extrabold text-[15px] md:text-[16px] brand-cream">{f.q}</span>
                   <ChevronDown
                     size={20}
-                    className={`brand-forest transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                    className={`brand-yellow transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
                     strokeWidth={2.5}
                   />
                 </button>
@@ -43,7 +41,7 @@ const FAQ = () => {
                   className="overflow-hidden transition-[max-height,opacity] duration-400 ease-out"
                   style={{ maxHeight: isOpen ? "700px" : "0px", opacity: isOpen ? 1 : 0 }}
                 >
-                  <div className="px-5 md:px-6 pb-5 text-[14.5px] leading-[1.65] text-[#3a3a25] whitespace-pre-line">
+                  <div className="px-5 md:px-6 pb-5 text-[14.5px] leading-[1.65] whitespace-pre-line" style={{ color: "#D9CFA8" }}>
                     {f.a}
                   </div>
                 </div>

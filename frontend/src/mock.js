@@ -3,64 +3,73 @@
 export const projectName = "SWAPPED";
 export const projectFull = "Swapped Character";
 
-export const heroInfo = {
-  intro:
-    "When worlds collide and souls cross over, something extraordinary happens.",
-  highlight: "Four lives, one twist of fate \u2014 a story of beings who got Swapped.",
-  jpTitle: "\u30b9\u30ef\u30c3\u30d7\u30c9\u30fb\u30ad\u30e3\u30e9\u30af\u30bf\u30fc",
-  enTitle: "A TALE OF SWAPPED SOULS",
-};
+// User-uploaded logo image (yellow SWAPPED on black bg, use with mix-blend-mode)
+export const logoImg =
+  "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/lhy5squ3_Picsart_26-05-11_17-13-33-412.jpg";
 
-export const mintInfo = [
-  { label: "MINT DATE", value: "TBA", pulse: true },
-  { label: "PRICE", value: "FREE", color: "#C97A12" },
-  { label: "SUPPLY", value: "222", color: "#1F2A1B" },
-  { label: "CHAIN", value: "ETH", color: "#3C7EE0" },
-];
+// Forest / mountain hero background
+export const forestImg =
+  "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/ldedl1g9_MV5BNDk5OGUyODAtZDdmNS00ZWU4LWFkYjktZmU5MGMwZWYyZjNlXkEyXkFqcGc%40._V1_FMjpg_UX1894_.jpg.jpeg";
 
-// Cover image (SWAPPED logo on forest scene)
+// First sampul (original SWAPPED scene)
 export const coverImage =
   "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/xi6xn62d_Picsart_26-05-11_16-30-58-791.jpg";
 
-// 4 NFT characters
+export const synopsis =
+  "Swapped is a 2026 American animated fantasy adventure comedy film directed by Nathan Greno and written by John Whittington, Christian Magalhaes, and Robert Snow, who all co-wrote the story with Greno and Adam Karp. Produced by Skydance Animation, the film features the voices of Michael B. Jordan, Juno Temple, Tracy Morgan, Cedric the Entertainer, and Justina Machado. It was released on Netflix and select theaters on May 1, 2026, and received mixed reviews from critics.";
+
+export const mintInfo = [
+  { label: "MINT DATE", value: "TBA", pulse: true },
+  { label: "PRICE", value: "FREE", color: "#F2C829" },
+  { label: "SUPPLY", value: "222", color: "#F4EBCC" },
+  { label: "CHAIN", value: "ETH", color: "#A7D88A" },
+];
+
+// Image URLs from earlier uploads
+const IMG_OLLIE = "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/740yenht_ChatGPT%20Image%2011%20Mei%202026%2C%2014.16.25.png";
+const IMG_IVY = "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/kjuldyxl_ChatGPT%20Image%2011%20Mei%202026%2C%2012.56.40.png";
+const IMG_BOOGLE = "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/pq859g43_ChatGPT%20Image%2011%20Mei%202026%2C%2013.02.33.png";
+const IMG_FIREWOLF = "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/yvqb8tzq_ChatGPT%20Image%2011%20Mei%202026%2C%2015.50.38.png";
+
+// 4 NFT characters (new order + new names)
 export const characters = [
   {
     id: 1,
-    name: "Ignara",
-    role: "The Burning Stag",
-    tag: "Spirit of Embers",
-    desc: "Forged in wildfire, her antlers are charred branches that refuse to die. A guardian of scorched lands.",
-    img: "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/kjuldyxl_ChatGPT%20Image%2011%20Mei%202026%2C%2012.56.40.png",
-    accent: "#D04C1F",
-    tint: "#FBE1CC",
-  },
-  {
-    id: 2,
-    name: "Pip",
-    role: "The Sunwing",
-    tag: "Heart of the Canopy",
-    desc: "A cheerful spirit with feathers of jungle sun. Always the first to greet the morning with a song.",
-    img: "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/pq859g43_ChatGPT%20Image%2011%20Mei%202026%2C%2013.02.33.png",
-    accent: "#7D5BC9",
-    tint: "#E6DCFB",
-  },
-  {
-    id: 3,
-    name: "Mello",
+    name: "OLLIE",
     role: "The Reefkeeper",
     tag: "Drifter of Tides",
     desc: "A calm soul with kelp for hair and dreams in his eyes. He hums lullabies the ocean still remembers.",
-    img: "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/740yenht_ChatGPT%20Image%2011%20Mei%202026%2C%2014.16.25.png",
+    img: IMG_OLLIE,
     accent: "#5B6FD8",
     tint: "#DEE3FB",
   },
   {
+    id: 2,
+    name: "IVY",
+    role: "The Burning Stag",
+    tag: "Spirit of Embers",
+    desc: "Forged in wildfire, her antlers are charred branches that refuse to die. A guardian of scorched lands.",
+    img: IMG_IVY,
+    accent: "#D04C1F",
+    tint: "#FBE1CC",
+  },
+  {
+    id: 3,
+    name: "BOOGLE",
+    role: "The Sunwing",
+    tag: "Heart of the Canopy",
+    desc: "A cheerful spirit with feathers of jungle sun. Always the first to greet the morning with a song.",
+    img: IMG_BOOGLE,
+    accent: "#7D5BC9",
+    tint: "#E6DCFB",
+  },
+  {
     id: 4,
-    name: "Mango",
+    name: "FIREWOLF",
     role: "The Leafplume",
     tag: "Whisper of the Grove",
     desc: "Curious, kind, and crowned with autumn. His feathers shift colors with the seasons of his mood.",
-    img: "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/yvqb8tzq_ChatGPT%20Image%2011%20Mei%202026%2C%2015.50.38.png",
+    img: IMG_FIREWOLF,
     accent: "#9CA336",
     tint: "#EEEFC9",
   },
@@ -70,7 +79,7 @@ export const legendCards = [
   {
     n: "1",
     title: "The Crossing",
-    text: "Four souls from four worlds awoke in bodies not their own. A blazing stag, a sunwing, a reefkeeper, a leafplume \u2014 each carrying a memory that was never theirs.",
+    text: "Four souls from four worlds awoke in bodies not their own. A reefkeeper, a burning stag, a sunwing, a leafplume \u2014 each carrying a memory that was never theirs.",
   },
   {
     n: "2",
@@ -91,7 +100,7 @@ export const faqs = [
   },
   {
     q: "Why the name \"Swapped\"?",
-    a: "The lore centers around four souls who woke up in the wrong worlds \u2014 a fire spirit in a forest, a bird with the heart of a fish, and so on. \"Swapped\" is the moment that started everything.",
+    a: "The lore centers around four souls who woke up in the wrong worlds \u2014 a reefkeeper in a forest, a stag in a storm, and so on. \"Swapped\" is the moment that started everything.",
   },
   {
     q: "How big is the collection?",

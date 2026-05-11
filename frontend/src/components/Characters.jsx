@@ -3,25 +3,23 @@ import { characters } from "../mock.js";
 
 const Characters = () => {
   return (
-    <section id="characters" className="relative bg-cream overflow-hidden">
-      <div className="kana-watermark text-[18vw] md:text-[12vw] leading-none" style={{ top: "4%", right: "-2%" }}>
-        魂
-      </div>
+    <section id="characters" className="relative bg-soft-section overflow-hidden">
+      <div className="leaf-overlay" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-14 py-24 md:py-28 relative">
         <div className="flex items-end justify-between flex-wrap gap-4 mb-12">
           <div>
-            <div className="text-[12px] tracking-[0.32em] font-bold text-amber-brand mb-3">
-              MEET THE FOUR
+            <div className="text-[12px] tracking-[0.32em] font-bold text-amber-warm mb-3">
+              THE CAST
             </div>
             <h2
-              className="font-serif-display brand-forest"
+              className="font-serif-display brand-cream"
               style={{ fontSize: "clamp(48px, 7vw, 96px)", lineHeight: 0.95 }}
             >
               The Characters
             </h2>
           </div>
-          <p className="max-w-md text-[15px] text-[#3a3a25] leading-relaxed">
+          <p className="max-w-md text-[15px] leading-relaxed" style={{ color: "#D9CFA8" }}>
             Four souls. Four worlds. One twist of fate. Meet the cast at the heart of the Swapped universe — each
             crafted by hand, each with a story of their own.
           </p>
@@ -45,7 +43,7 @@ const Characters = () => {
                   <span className="text-[11px] tracking-[0.2em] text-[#6e5c25] font-semibold">{c.tag}</span>
                 </div>
                 <h3 className="font-display text-2xl mt-2 brand-forest">{c.name}</h3>
-                <div className="text-[13px] font-semibold text-amber-brand mb-2">{c.role}</div>
+                <div className="text-[13px] font-semibold text-[#B26F1F] mb-2">{c.role}</div>
                 <p className="text-[13.5px] leading-[1.55] text-[#3a3a25]">{c.desc}</p>
               </div>
             </div>
