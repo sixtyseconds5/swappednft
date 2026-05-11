@@ -1,88 +1,134 @@
-// Mock data for RYUJIN clone
+// Mock data for SWAPPED Character NFT site
+
+export const projectName = "SWAPPED";
+export const projectFull = "Swapped Character";
 
 export const heroInfo = {
-  intro: "In a city where neon bleeds into shadows and legends refuse to die, the Ryujin walks among us.",
-  highlight: "Made for people who moves different.",
-  jpTitle: "ミス・イン・モーション",
-  enTitle: "MYTH IN MOTION",
+  intro:
+    "When worlds collide and souls cross over, something extraordinary happens.",
+  highlight: "Four lives, one twist of fate \u2014 a story of beings who got Swapped.",
+  jpTitle: "\u30b9\u30ef\u30c3\u30d7\u30c9\u30fb\u30ad\u30e3\u30e9\u30af\u30bf\u30fc",
+  enTitle: "A TALE OF SWAPPED SOULS",
 };
 
 export const mintInfo = [
   { label: "MINT DATE", value: "TBA", pulse: true },
-  { label: "PRICE", value: "FREE", color: "#C45A33" },
-  { label: "SUPPLY", value: "1111", color: "#0E0E0E" },
+  { label: "PRICE", value: "FREE", color: "#C97A12" },
+  { label: "SUPPLY", value: "222", color: "#1F2A1B" },
   { label: "CHAIN", value: "ETH", color: "#3C7EE0" },
 ];
 
-export const nftImages = [
-  "https://ryu-jin.xyz/hero.png",
-  "https://ryu-jin.xyz/hero2.png",
-  "https://ryu-jin.xyz/hero3.png",
+// Cover image (SWAPPED logo on forest scene)
+export const coverImage =
+  "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/xi6xn62d_Picsart_26-05-11_16-30-58-791.jpg";
+
+// 4 NFT characters
+export const characters = [
+  {
+    id: 1,
+    name: "Ignara",
+    role: "The Burning Stag",
+    tag: "Spirit of Embers",
+    desc: "Forged in wildfire, her antlers are charred branches that refuse to die. A guardian of scorched lands.",
+    img: "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/kjuldyxl_ChatGPT%20Image%2011%20Mei%202026%2C%2012.56.40.png",
+    accent: "#D04C1F",
+    tint: "#FBE1CC",
+  },
+  {
+    id: 2,
+    name: "Pip",
+    role: "The Sunwing",
+    tag: "Heart of the Canopy",
+    desc: "A cheerful spirit with feathers of jungle sun. Always the first to greet the morning with a song.",
+    img: "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/pq859g43_ChatGPT%20Image%2011%20Mei%202026%2C%2013.02.33.png",
+    accent: "#7D5BC9",
+    tint: "#E6DCFB",
+  },
+  {
+    id: 3,
+    name: "Mello",
+    role: "The Reefkeeper",
+    tag: "Drifter of Tides",
+    desc: "A calm soul with kelp for hair and dreams in his eyes. He hums lullabies the ocean still remembers.",
+    img: "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/740yenht_ChatGPT%20Image%2011%20Mei%202026%2C%2014.16.25.png",
+    accent: "#5B6FD8",
+    tint: "#DEE3FB",
+  },
+  {
+    id: 4,
+    name: "Mango",
+    role: "The Leafplume",
+    tag: "Whisper of the Grove",
+    desc: "Curious, kind, and crowned with autumn. His feathers shift colors with the seasons of his mood.",
+    img: "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/yvqb8tzq_ChatGPT%20Image%2011%20Mei%202026%2C%2015.50.38.png",
+    accent: "#9CA336",
+    tint: "#EEEFC9",
+  },
 ];
 
 export const legendCards = [
   {
     n: "1",
-    title: "Origins",
-    text: "Born where ancient myth collides with modern streets. Ryujin emerges from a world shaped by forgotten legends, reimagined through an urban lens.",
+    title: "The Crossing",
+    text: "Four souls from four worlds awoke in bodies not their own. A blazing stag, a sunwing, a reefkeeper, a leafplume \u2014 each carrying a memory that was never theirs.",
   },
   {
     n: "2",
-    title: "Meaning",
-    text: "More than visuals, each piece carries identity, symbolism, and story. Ryujin represents motion, evolution, and the tension between past and present.",
+    title: "The Bond",
+    text: "Swapped is more than a collection. Each character holds a fragment of the story \u2014 their colors, their tells, their quiet songs. Together they form a chorus.",
   },
   {
     n: "3",
-    title: "Goal",
-    text: "To build a living universe driven by art and community. No empty promises. Just something real that grows with the people who believe in it.",
+    title: "The Path",
+    text: "We are building a small, real universe \u2014 art-first, community-driven, no empty promises. Holders walk this story with us, one swap at a time.",
   },
 ];
 
 export const faqs = [
   {
-    q: "What is RYUJIN?",
-    a: "RyuJin is a project that blends anime-inspired aesthetics with a raw urban edge. It represents a world where myth is alive, evolving, and constantly in motion. Each piece channels the spirit of a modern dragon — powerful, untamed, and shaped by the streets as much as by legend.\n\nAt its core, RyuJin is about identity, movement, and culture. It's not just art sitting in a wallet, it's part of a growing universe built around the idea of 'myth in motion' — where holders aren't just collectors, but participants in what comes next.",
+    q: "What is Swapped Character?",
+    a: "Swapped is a curated collection of 222 hand-crafted characters whose stories are tangled by fate. Each piece is more than a PFP \u2014 it's a character with a name, a role, and a thread in a larger story we're slowly unfolding with the community.",
   },
   {
-    q: 'Why "RyuJin"?',
-    a: "Ryūjin (龍神) in Japanese mythology literally means 'Dragon God.' He's the deity of the sea and storms, a powerful dragon who rules the oceans from an underwater palace called Ryūgū-jō.",
+    q: "Why the name \"Swapped\"?",
+    a: "The lore centers around four souls who woke up in the wrong worlds \u2014 a fire spirit in a forest, a bird with the heart of a fish, and so on. \"Swapped\" is the moment that started everything.",
   },
   {
-    q: "Do holders have IP rights of their RyuJin?",
-    a: "Yes, RyuJin holders are granted IP rights over their NFTs, allowing them to use, adapt, and build upon their assets in accordance with the project's license.",
+    q: "How big is the collection?",
+    a: "222 total supply on Ethereum. Small, intentional, and curated \u2014 every piece is hand-finished and meant to find a real owner, not a flip.",
   },
   {
-    q: "How gonna be WL distribution?",
-    a: "WL Distribution (1111 Supply)\n• 111 spots for treasury\n• 300 spots for OG (GTD)\n• 700 spots for FCFS (first come, first served).",
+    q: "How will the WL distribution work?",
+    a: "WL Distribution (222 Supply)\n\u2022 22 spots reserved for the team and treasury\n\u2022 60 spots for OG holders (GTD)\n\u2022 140 spots FCFS (first come, first served)",
   },
   {
-    q: "Launchpad",
-    a: "Opensea.",
+    q: "Where will it launch?",
+    a: "Free mint on Ethereum. Marketplace and launchpad details will be announced closer to mint date.",
   },
   {
-    q: "What is the story behind RyuJin?",
-    a: "The idea for RyuJin came from a fascination with dragon symbolism — power, wisdom, and transformation — combined with a modern, urban anime style. What began as a simple concept quickly evolved into a clear vision: a collection that brings myth to life in a digital form, built to connect with a new generation of collectors.",
+    q: "Do holders own the IP of their character?",
+    a: "Yes. Holders are granted full commercial IP rights to the character they own, so you can build, merch, animate, and tell stories with your Swapped.",
   },
   {
-    q: "What makes RyuJin different from other projects?",
-    a: "RyuJin stands out through its focus on clean, minimal design made specifically for PFP use, prioritizing clarity, identity, and strong visual presence over complexity.\n\nMore than a collection, it aims to build a movement driven by shared vibes and community energy. The idea is mutual growth: the community shapes the direction, and the project evolves alongside it, keeping a consistent artistic identity while staying dynamic and community-driven.",
+    q: "What makes Swapped different?",
+    a: "We're not chasing hype. Swapped is small (222), story-led, and design-first. Every character has its own role in the universe, and the community shapes where the story goes next.",
   },
   {
-    q: "Do you have roadmap plans?",
-    a: "Yes! RyuJin will keep in motion after mint, here you have a preview of what we aiming to achieve with this project:\n\n/Phase 0: Free mint on Ethereum, community formation, and DAO setup.\n/Phase 1: Continuous art and lore drops to build identity organically.\n/Phase 2: Expanded storytelling, new characters, community-driven narrative, and early utility exploration.\n/Phase 3: Ryujin: Her Awakening — a second connected collection focused on female characters within the same universe.\n/Phase 4: Ongoing evolution of the ecosystem.\n\nNo fake promises, just a myth in motion.\n\n(This roadmap will be fully explained in the near future).",
+    q: "Is there a roadmap?",
+    a: "Yes \u2014 a soft one, kept honest:\n\n/Phase 0: Free mint on Ethereum, community formation.\n/Phase 1: Continuous art + lore drops to deepen each character.\n/Phase 2: Animated shorts and collaborative story chapters with holders.\n/Phase 3: A connected second collection within the Swapped universe.\n/Phase 4: Ongoing evolution \u2014 driven by the people who hold the story.\n\nNo fake promises. Just souls in motion.",
   },
 ];
 
 export const footerLinks = [
-  { label: "OpenSea", href: "#" },
-  { label: "Discord", href: "#" },
-  { label: "Twitter", href: "https://x.com/NftRyuJin" },
+  { label: "Twitter (soon)", href: "#" },
+  { label: "Discord (soon)", href: "#" },
+  { label: "OpenSea (soon)", href: "#" },
   { label: "Roadmap", href: "#" },
 ];
 
 export const applyTasks = [
   { id: 1, label: "Follow us on X", cta: "Follow", icon: "bell" },
-  { id: 2, label: "Like This Post", cta: "Like Post", icon: "heart" },
-  { id: 3, label: "Retweet This Post", cta: "Retweet", icon: "repeat" },
-  { id: 4, label: "Comment Under This Post", cta: "Comment", icon: "message" },
+  { id: 2, label: "Like the Pinned Post", cta: "Like Post", icon: "heart" },
+  { id: 3, label: "Retweet the Pinned Post", cta: "Retweet", icon: "repeat" },
+  { id: 4, label: "Comment Your Favorite Character", cta: "Comment", icon: "message" },
 ];

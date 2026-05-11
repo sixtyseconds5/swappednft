@@ -6,31 +6,23 @@ const ApplyCTA = () => {
   return (
     <section className="relative bg-canvas overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-14 py-20 md:py-24">
-        <div className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center bg-rust shadow-[0_30px_60px_-30px_rgba(184,91,54,0.6)]">
-          {/* subtle inner pattern */}
-          <div
-            aria-hidden
-            className="absolute inset-0 opacity-[0.08]"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 20% 20%, #fff 1px, transparent 1.5px), radial-gradient(circle at 70% 60%, #fff 1px, transparent 1.5px)",
-              backgroundSize: "38px 38px, 60px 60px",
-            }}
-          />
+        <div className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center bg-forest border-2 border-[#1F2A1B] shadow-[0_30px_60px_-30px_rgba(28,38,18,0.6)]">
+          <div aria-hidden className="absolute inset-0 dot-pattern opacity-30" />
+          <div className="absolute -top-12 -right-12 w-56 h-56 rounded-full bg-yellow-brand opacity-30 blur-2xl" />
           <h2
-            className="font-display text-[#FFF1DD] relative"
-            style={{ fontSize: "clamp(34px, 5.4vw, 72px)", lineHeight: 1.05 }}
+            className="logo-swapped relative"
+            style={{ fontSize: "clamp(40px, 6.4vw, 90px)", lineHeight: 1.05 }}
           >
-            Ready to Claim Your Pass?
+            CLAIM YOUR PASS
           </h2>
-          <p className="text-[#FFF1DD]/90 mt-4 text-[15px] md:text-[17px] relative">
-            Complete the following steps in order to get a chance for RyuJin Pass (GTD)
+          <p className="text-[#F5E9B6] mt-5 text-[15px] md:text-[17px] relative max-w-2xl mx-auto">
+            Complete the following steps in order to get a chance for a Swapped Pass (GTD)
           </p>
           <button
             onClick={() => setOpen(true)}
-            className="btn-press relative mt-8 inline-flex items-center justify-center px-8 py-4 rounded-xl bg-[#FFF7E6] brand-rust font-extrabold tracking-wide shadow-[0_12px_24px_-10px_rgba(0,0,0,0.35)] hover:bg-white"
+            className="btn-press btn-primary relative mt-8 inline-flex items-center justify-center px-9 py-4 rounded-xl font-extrabold tracking-wide"
           >
-            Apply Here <span className="ml-2">🎴</span>
+            Apply Here 🎴
           </button>
         </div>
       </div>

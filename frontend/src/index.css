@@ -6,8 +6,8 @@
 
 html, body {
   margin: 0;
-  background: #F8E7CF;
-  color: #1a120b;
+  background: #F4EBCC;
+  color: #1F2A1B;
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -25,49 +25,51 @@ html, body {
   font-family: 'Noto Sans JP', 'Plus Jakarta Sans', sans-serif;
 }
 
-/* selection */
-::selection { background: #C45A33; color: #FFF1DD; }
+::selection { background: #F2D547; color: #1F2A1B; }
 
-/* layered backdrop with japanese chars + soft sun */
+/* ---------- Color helpers ---------- */
+.brand-yellow { color: #F2C829; }
+.bg-yellow-brand { background: #F2C829; }
+.brand-forest { color: #1F2A1B; }
+.brand-moss { color: #5D7A3D; }
+.bg-forest { background: #1F2A1B; }
+.bg-moss { background: #5D7A3D; }
+.border-moss { border-color: #5D7A3D; }
+.text-amber-brand { color: #B26F1F; }
+
+/* ---------- Backgrounds ---------- */
 .bg-canvas {
   background:
-    radial-gradient(900px 700px at 90% 8%, #F2C99E 0%, rgba(242,201,158,0) 60%),
-    radial-gradient(600px 500px at 0% 100%, #F1C39D 0%, rgba(241,195,157,0) 60%),
-    linear-gradient(180deg, #FBEFD8 0%, #F6E2C4 100%);
+    radial-gradient(900px 700px at 92% 6%, #F4E29B 0%, rgba(244,226,155,0) 60%),
+    radial-gradient(700px 500px at -5% 100%, #E9DEB0 0%, rgba(233,222,176,0) 60%),
+    linear-gradient(180deg, #F6EDCE 0%, #EFE2B6 100%);
 }
-
 .bg-soft-section {
-  background: linear-gradient(180deg, #F8E7CF 0%, #F4DDBF 100%);
+  background: linear-gradient(180deg, #F4EBCC 0%, #EBE0B5 100%);
+}
+.bg-cream {
+  background: #F4EBCC;
 }
 
-.brand-rust { color: #C45A33; }
-.bg-rust { background: #B85B36; }
-.bg-rust-2 { background: #C45A33; }
-.border-rust { border-color: #C45A33; }
-
-/* sun ornament */
+/* ---------- Decorative bits ---------- */
 .sun-orb {
   position: absolute;
-  width: 320px; height: 320px;
+  width: 360px; height: 360px;
   border-radius: 9999px;
-  background: radial-gradient(circle at 35% 35%, #F2BE8E 0%, #EAA871 55%, #E29F65 100%);
+  background: radial-gradient(circle at 35% 35%, #FBE583 0%, #F2C829 60%, #D7A815 100%);
   filter: blur(0.5px);
-  opacity: 0.7;
+  opacity: 0.55;
 }
-
-/* faint kana watermark */
 .kana-watermark {
   position: absolute;
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 900;
-  color: #DDB78A;
-  opacity: 0.35;
+  color: #C9B975;
+  opacity: 0.32;
   pointer-events: none;
   white-space: nowrap;
   user-select: none;
 }
-
-/* corner kanji decoration lines */
 .deco-lines {
   position: absolute;
   inset: 0;
@@ -78,40 +80,105 @@ html, body {
 .deco-lines::after {
   content: "";
   position: absolute;
-  width: 280px;
+  width: 300px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #D1A77A, transparent);
+  background: linear-gradient(90deg, transparent, #B8A364, transparent);
 }
-.deco-lines::before { top: 18%; right: -40px; transform: rotate(-18deg); }
-.deco-lines::after  { bottom: 14%; right: -40px; transform: rotate(14deg); }
+.deco-lines::before { top: 22%; right: -40px; transform: rotate(-14deg); }
+.deco-lines::after  { bottom: 12%; right: -40px; transform: rotate(10deg); }
 
+/* ---------- SWAPPED Logo Text ---------- */
+.logo-swapped {
+  font-family: 'Bowlby One', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #F2C829;
+  -webkit-text-stroke: 2px #1F2A1B;
+  text-shadow:
+    4px 4px 0 #1F2A1B,
+    0 0 24px rgba(242,200,41,0.35);
+}
+.logo-swapped-sm {
+  -webkit-text-stroke: 1.5px #1F2A1B;
+  text-shadow: 2px 2px 0 #1F2A1B;
+}
+
+/* ---------- Character cards ---------- */
 .nft-card {
   border-radius: 22px;
-  box-shadow: 0 22px 50px -18px rgba(80, 36, 12, 0.35), 0 6px 18px -8px rgba(80, 36, 12, 0.25);
+  box-shadow: 0 22px 50px -18px rgba(28, 38, 18, 0.45), 0 6px 18px -8px rgba(28, 38, 18, 0.28);
   transition: transform 600ms cubic-bezier(.2,.7,.2,1), box-shadow 400ms;
   overflow: hidden;
   background: #fff;
 }
-.nft-fan {
+
+/* Hero 4-card stagger */
+.char-fan {
   position: relative;
-  width: 460px;
+  width: 520px;
   height: 460px;
 }
-.nft-fan .nft-card {
+.char-fan .nft-card {
   position: absolute;
-  width: 240px; height: 280px;
+  width: 200px;
+  height: 240px;
 }
-.nft-fan .c1 { left: 0; top: 60px; transform: rotate(-14deg); background:#E9F0CB; }
-.nft-fan .c2 { left: 200px; top: 110px; transform: rotate(0deg); background:#F2C8A6; z-index: 3; }
-.nft-fan .c3 { left: 180px; top: 90px; transform: rotate(12deg); background:#16223A; z-index: 1; }
-.nft-fan:hover .c1 { transform: rotate(-18deg) translateY(-6px); }
-.nft-fan:hover .c2 { transform: rotate(0deg) translateY(-12px) scale(1.03); }
-.nft-fan:hover .c3 { transform: rotate(16deg) translateY(-6px); }
+.char-fan .cf1 { left: 0;   top: 60px;  transform: rotate(-12deg); }
+.char-fan .cf2 { left: 130px; top: 10px;  transform: rotate(-4deg); z-index: 2; }
+.char-fan .cf3 { left: 260px; top: 10px;  transform: rotate(4deg);  z-index: 2; }
+.char-fan .cf4 { left: 320px; top: 80px;  transform: rotate(14deg); }
+.char-fan:hover .cf1 { transform: rotate(-16deg) translateY(-6px); }
+.char-fan:hover .cf2 { transform: rotate(-4deg) translateY(-10px); }
+.char-fan:hover .cf3 { transform: rotate(4deg) translateY(-10px); }
+.char-fan:hover .cf4 { transform: rotate(18deg) translateY(-6px); }
 
+/* Character showcase tile */
+.char-tile {
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 500ms cubic-bezier(.2,.7,.2,1), box-shadow 400ms;
+  box-shadow: 0 18px 40px -22px rgba(28, 38, 18, 0.5);
+}
+.char-tile:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 60px -22px rgba(28, 38, 18, 0.55);
+}
+.char-tile .char-img-wrap {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+.char-tile img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 700ms cubic-bezier(.2,.7,.2,1);
+}
+.char-tile:hover img { transform: scale(1.05); }
+
+/* Buttons */
 .btn-press {
   transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
 .btn-press:active { transform: translateY(1px) scale(0.99); }
+
+.btn-primary {
+  background: #F2C829;
+  color: #1F2A1B;
+  border: 2px solid #1F2A1B;
+  box-shadow: 4px 4px 0 #1F2A1B;
+}
+.btn-primary:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #1F2A1B;
+}
+.btn-outline {
+  background: transparent;
+  color: #1F2A1B;
+  border: 2px solid #1F2A1B;
+}
+.btn-outline:hover {
+  background: #1F2A1B;
+  color: #F2C829;
+}
 
 /* arrow bounce */
 @keyframes bounceY {
@@ -127,44 +194,60 @@ html, body {
 }
 .pulse-dot { animation: pulseDot 1.8s ease-out infinite; }
 
-/* subtle fade-up on scroll-into-view (simple) */
+/* fade up */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(14px); }
   to { opacity: 1; transform: translateY(0); }
 }
 .fade-up { animation: fadeUp 700ms cubic-bezier(.2,.7,.2,1) both; }
 
+/* floating */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.float-y { animation: floatY 5s ease-in-out infinite; }
+
 /* faq panel */
 .faq-item {
-  border: 1px solid rgba(196,90,51,0.25);
-  background: rgba(255, 235, 209, 0.55);
+  border: 1.5px solid rgba(31,42,27,0.18);
+  background: rgba(255, 247, 218, 0.7);
   border-radius: 14px;
   transition: background 220ms, border-color 220ms, transform 220ms;
 }
-.faq-item:hover { background: rgba(255, 235, 209, 0.85); border-color: rgba(196,90,51,0.5); }
-.faq-item[data-open="true"] { background: rgba(255, 235, 209, 0.95); }
+.faq-item:hover { background: rgba(255, 247, 218, 0.95); border-color: rgba(31,42,27,0.42); }
+.faq-item[data-open="true"] {
+  background: rgba(242, 200, 41, 0.12);
+  border-color: #1F2A1B;
+}
+
+/* sparkle dot pattern overlay */
+.dot-pattern {
+  background-image: radial-gradient(circle, rgba(31,42,27,0.15) 1px, transparent 1.6px);
+  background-size: 22px 22px;
+}
 
 @layer base {
   :root {
-    --background: 34 60% 89%;
-    --foreground: 24 40% 12%;
+    --background: 48 50% 87%;
+    --foreground: 90 18% 14%;
     --card: 0 0% 100%;
-    --card-foreground: 24 40% 12%;
+    --card-foreground: 90 18% 14%;
     --popover: 0 0% 100%;
-    --popover-foreground: 24 40% 12%;
-    --primary: 18 60% 49%;
-    --primary-foreground: 36 60% 96%;
-    --secondary: 30 40% 90%;
-    --secondary-foreground: 24 40% 12%;
-    --muted: 30 30% 90%;
-    --muted-foreground: 24 10% 35%;
-    --accent: 30 40% 88%;
-    --accent-foreground: 24 40% 12%;
+    --popover-foreground: 90 18% 14%;
+    --primary: 49 88% 55%;
+    --primary-foreground: 90 18% 14%;
+    --secondary: 50 35% 86%;
+    --secondary-foreground: 90 18% 14%;
+    --muted: 50 25% 86%;
+    --muted-foreground: 90 12% 32%;
+    --accent: 50 35% 86%;
+    --accent-foreground: 90 18% 14%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 26 35% 80%;
-    --input: 26 35% 80%;
-    --ring: 18 60% 49%;
+    --border: 50 25% 72%;
+    --input: 50 25% 72%;
+    --ring: 49 88% 55%;
     --radius: 0.75rem;
   }
 }
