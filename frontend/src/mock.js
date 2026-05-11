@@ -3,7 +3,7 @@
 export const projectName = "SWAPPED";
 export const projectFull = "Swapped Character";
 
-// User-uploaded logo image (yellow SWAPPED on black bg, use with mix-blend-mode)
+// User-uploaded logo image
 export const logoImg =
   "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/lhy5squ3_Picsart_26-05-11_17-13-33-412.jpg";
 
@@ -15,33 +15,43 @@ export const forestImg =
 export const coverImage =
   "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/xi6xn62d_Picsart_26-05-11_16-30-58-791.jpg";
 
+// Teaser video (under synopsis)
+export const teaserVideo =
+  "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/3ckoww7z_VN20260511_221407.mp4";
+
+export const heroTagline = "Characters from the Netflix film story";
+
 export const synopsis =
   "Swapped is a 2026 American animated fantasy adventure comedy film directed by Nathan Greno and written by John Whittington, Christian Magalhaes, and Robert Snow, who all co-wrote the story with Greno and Adam Karp. Produced by Skydance Animation, the film features the voices of Michael B. Jordan, Juno Temple, Tracy Morgan, Cedric the Entertainer, and Justina Machado. It was released on Netflix and select theaters on May 1, 2026, and received mixed reviews from critics.";
 
 export const mintInfo = [
   { label: "MINT DATE", value: "TBA", pulse: true },
-  { label: "PRICE", value: "0.001", color: "#F2C829" },
+  { label: "PRICE", value: "0.001", color: "#F2C829", suffix: "ETH" },
   { label: "SUPPLY", value: "333", color: "#F4EBCC" },
-  { label: "CHAIN", value: "ETH", color: "#A7D88A" },
+  { label: "CHAIN", value: "ETHEREUM", color: "#A7D88A" },
 ];
 
 // Image URLs from earlier uploads
-const IMG_OLLIE = "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/740yenht_ChatGPT%20Image%2011%20Mei%202026%2C%2014.16.25.png";
-const IMG_IVY = "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/kjuldyxl_ChatGPT%20Image%2011%20Mei%202026%2C%2012.56.40.png";
-const IMG_BOOGLE = "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/pq859g43_ChatGPT%20Image%2011%20Mei%202026%2C%2013.02.33.png";
-const IMG_FIREWOLF = "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/yvqb8tzq_ChatGPT%20Image%2011%20Mei%202026%2C%2015.50.38.png";
+const IMG_OLLIE =
+  "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/5lprcjvb_ChatGPT%20Image%2011%20Mei%202026%2C%2011.59.39.png";
+const IMG_IVY =
+  "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/kjuldyxl_ChatGPT%20Image%2011%20Mei%202026%2C%2012.56.40.png";
+const IMG_BOOGLE =
+  "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/pq859g43_ChatGPT%20Image%2011%20Mei%202026%2C%2013.02.33.png";
+const IMG_FIREWOLF =
+  "https://customer-assets.emergentagent.com/job_character-showcase-20/artifacts/yvqb8tzq_ChatGPT%20Image%2011%20Mei%202026%2C%2015.50.38.png";
 
-// 4 NFT characters (new order + new names)
+// 4 NFT characters
 export const characters = [
   {
     id: 1,
     name: "OLLIE",
     role: "The Reefkeeper",
     tag: "Drifter of Tides",
-    desc: "A calm soul with kelp for hair and dreams in his eyes. He hums lullabies the ocean still remembers.",
+    desc: "A calm and curious soul with a heart as wide as the open sea. Ollie greets every wave with a smile and a story.",
     img: IMG_OLLIE,
-    accent: "#5B6FD8",
-    tint: "#DEE3FB",
+    accent: "#C97A12",
+    tint: "#FBE7B5",
   },
   {
     id: 2,
@@ -96,7 +106,7 @@ export const legendCards = [
 export const faqs = [
   {
     q: "What is Swapped Character?",
-    a: "Swapped is a curated collection of 222 hand-crafted characters whose stories are tangled by fate. Each piece is more than a PFP \u2014 it's a character with a name, a role, and a thread in a larger story we're slowly unfolding with the community.",
+    a: "Swapped Character is a curated collection of 333 hand-crafted NFTs inspired by the Swapped Netflix film universe. Each piece is more than a PFP \u2014 it's a character with a name, a role, and a thread in a larger story we're slowly unfolding with the community.",
   },
   {
     q: "Why the name \"Swapped\"?",
@@ -104,15 +114,23 @@ export const faqs = [
   },
   {
     q: "How big is the collection?",
-    a: "222 total supply on Ethereum. Small, intentional, and curated \u2014 every piece is hand-finished and meant to find a real owner, not a flip.",
+    a: "333 total supply on Ethereum. Small, intentional, and curated \u2014 every piece is hand-finished and meant to find a real owner, not a flip.",
+  },
+  {
+    q: "What is the mint price?",
+    a: "Mint price is 0.001 ETH per NFT. Plus standard Ethereum gas fees. Maximum 2 mints per wallet during the WL window.",
   },
   {
     q: "How will the WL distribution work?",
-    a: "WL Distribution (222 Supply)\n\u2022 22 spots reserved for the team and treasury\n\u2022 60 spots for OG holders (GTD)\n\u2022 140 spots FCFS (first come, first served)",
+    a: "WL Distribution (333 Supply)\n\u2022 33 spots reserved for the team and treasury\n\u2022 100 spots for OG holders (GTD)\n\u2022 200 spots FCFS (first come, first served)",
+  },
+  {
+    q: "When is the mint date?",
+    a: "Mint date is TBA (To Be Announced). Follow our socials to be the first to know when it goes live. The pulse next to MINT DATE on the homepage will turn into a live countdown once announced.",
   },
   {
     q: "Where will it launch?",
-    a: "Free mint on Ethereum. Marketplace and launchpad details will be announced closer to mint date.",
+    a: "Launching on Ethereum mainnet. Marketplace and launchpad details will be announced closer to mint day.",
   },
   {
     q: "Do holders own the IP of their character?",
@@ -120,11 +138,11 @@ export const faqs = [
   },
   {
     q: "What makes Swapped different?",
-    a: "We're not chasing hype. Swapped is small (222), story-led, and design-first. Every character has its own role in the universe, and the community shapes where the story goes next.",
+    a: "We're not chasing hype. Swapped is small (333), story-led, and design-first. Every character has its own role in the universe, and the community shapes where the story goes next.",
   },
   {
     q: "Is there a roadmap?",
-    a: "Yes \u2014 a soft one, kept honest:\n\n/Phase 0: Free mint on Ethereum, community formation.\n/Phase 1: Continuous art + lore drops to deepen each character.\n/Phase 2: Animated shorts and collaborative story chapters with holders.\n/Phase 3: A connected second collection within the Swapped universe.\n/Phase 4: Ongoing evolution \u2014 driven by the people who hold the story.\n\nNo fake promises. Just souls in motion.",
+    a: "Yes \u2014 a soft one, kept honest:\n\n/Phase 0: Mint of 333 Swapped Characters on Ethereum (0.001 ETH), community formation.\n/Phase 1: Continuous art + lore drops to deepen each character.\n/Phase 2: Animated shorts and collaborative story chapters with holders.\n/Phase 3: A connected second collection within the Swapped universe.\n/Phase 4: Ongoing evolution \u2014 driven by the people who hold the story.\n\nNo fake promises. Just souls in motion.",
   },
 ];
 

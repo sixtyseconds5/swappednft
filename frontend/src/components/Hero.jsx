@@ -1,6 +1,13 @@
 import React, { useState } from "react";
-import { ArrowDown, Sparkles, Ticket } from "lucide-react";
-import { mintInfo, logoImg, forestImg, synopsis } from "../mock.js";
+import { ArrowDown, Sparkles, Ticket, PlayCircle } from "lucide-react";
+import {
+  mintInfo,
+  logoImg,
+  forestImg,
+  synopsis,
+  teaserVideo,
+  heroTagline,
+} from "../mock.js";
 import { ApplyModal } from "./ApplyModal";
 
 const Hero = () => {
@@ -40,13 +47,46 @@ const Hero = () => {
           />
         </div>
 
+        {/* Tagline */}
+        <div className="mt-6 md:mt-8 flex justify-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#F2C829]/50 bg-[#16291A]/60 backdrop-blur-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#F2C829]" />
+            <span className="text-[12px] md:text-[13px] tracking-[0.18em] font-semibold brand-yellow uppercase">
+              {heroTagline}
+            </span>
+          </div>
+        </div>
+
         {/* Synopsis */}
-        <div className="mt-10 md:mt-12 max-w-3xl mx-auto fade-up">
+        <div className="mt-6 md:mt-8 max-w-3xl mx-auto fade-up">
           <div className="synopsis-card p-6 md:p-7">
             <div className="text-[11px] tracking-[0.32em] font-bold brand-yellow mb-2">SYNOPSIS</div>
             <p className="text-[14.5px] md:text-[15.5px] leading-[1.7] brand-cream">
               {synopsis}
             </p>
+          </div>
+        </div>
+
+        {/* Teaser Video */}
+        <div className="mt-8 md:mt-10 max-w-3xl mx-auto fade-up">
+          <div className="relative rounded-2xl overflow-hidden border-2 border-[#F2C829]/40 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)] bg-black">
+            <video
+              src={teaserVideo}
+              controls
+              playsInline
+              preload="metadata"
+              poster={forestImg}
+              className="w-full h-auto block"
+              style={{ maxHeight: "480px", aspectRatio: "16 / 9", objectFit: "cover" }}
+            >
+              Your browser does not support the video tag.
+            </video>
+            <div className="absolute top-3 left-3 pointer-events-none">
+              <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#16291A]/85 border border-[#F2C829]/50">
+                <PlayCircle size={14} className="brand-yellow" strokeWidth={2.5} />
+                <span className="text-[10px] tracking-[0.22em] font-bold brand-yellow">TEASER</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -67,7 +107,7 @@ const Hero = () => {
             </p>
           </div>
 
-          {/* Apply CTA card (replaces 4-card fan) */}
+          {/* Apply CTA card */}
           <div className="lg:col-span-6 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-md rounded-3xl overflow-hidden bg-[#16291A] border-2 border-[#F2C829] p-8 md:p-9 shadow-[0_30px_60px_-30px_rgba(242,200,41,0.45)]">
               <div
@@ -129,12 +169,23 @@ const Hero = () => {
                       {m.pulse && <span className="w-2 h-2 rounded-full bg-emerald-400 pulse-dot" />}
                     </div>
                     <div
-                      className="font-display text-3xl md:text-4xl"
-                      style={{ color: m.color || "#F4EBCC" }}
+                      className="font-display leading-none"
+                      style={{
+                        color: m.color || "#F4EBCC",
+                        fontSize:
+                          m.value === "ETHEREUM"
+                            ? "clamp(20px, 2.2vw, 28px)"
+                            : "clamp(28px, 3.4vw, 40px)",
+                      }}
                     >
                       {m.value}
-                      {m.label === "PRICE" && (
-                        <span className="text-base ml-1" style={{ color: "#D9CFA8" }}>ETH</span>
+                      {m.suffix && (
+                        <span
+                          className="text-base ml-1 align-baseline"
+                          style={{ color: "#D9CFA8" }}
+                        >
+                          {m.suffix}
+                        </span>
                       )}
                     </div>
                   </div>
