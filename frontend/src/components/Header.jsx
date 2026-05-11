@@ -15,10 +15,10 @@ const Header = () => {
 
         <div className="text-right leading-tight">
           <div className="text-[10px] md:text-[11px] brand-moss tracking-[0.32em] font-semibold">
-            CHARACTER · 222
+            CHARACTER · 333
           </div>
           <div className="text-[10px] md:text-[11px] text-[#E6B85A] tracking-[0.28em] mt-1">
-            FREE MINT · ETH
+            0.001 ETH · MINT TBA
           </div>
         </div>
       </div>

@@ -1,11 +1,13 @@
-import React from "react";
-import { ArrowDown } from "lucide-react";
-import { mintInfo, characters, logoImg, forestImg, synopsis } from "../mock.js";
+import React, { useState } from "react";
+import { ArrowDown, Sparkles, Ticket } from "lucide-react";
+import { mintInfo, logoImg, forestImg, synopsis } from "../mock.js";
+import { ApplyModal } from "./ApplyModal";
 
 const Hero = () => {
+  const [openApply, setOpenApply] = useState(false);
+
   return (
     <section id="top" className="relative bg-canvas overflow-hidden">
-      {/* Forest background layer */}
       <div
         aria-hidden
         className="absolute inset-0 opacity-[0.18]"
@@ -48,7 +50,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Big title + 4-card fan */}
+        {/* Meet the four + Apply CTA card */}
         <div className="relative mt-20 md:mt-28 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-6 relative">
             <div className="text-[12px] tracking-[0.32em] font-bold text-amber-warm mb-3">
@@ -60,27 +62,60 @@ const Hero = () => {
             >
               Four lives,<br />one twist.
             </h2>
-            <p className="mt-6 max-w-md text-[15px] md:text-[16px] leading-[1.6] brand-cream/90" style={{color: "#D9CFA8"}}>
+            <p className="mt-6 max-w-md text-[15px] md:text-[16px] leading-[1.6]" style={{ color: "#D9CFA8" }}>
               When worlds collide and souls cross over, something extraordinary happens. Meet the cast at the heart of the Swapped story.
             </p>
           </div>
 
+          {/* Apply CTA card (replaces 4-card fan) */}
           <div className="lg:col-span-6 flex justify-center lg:justify-end">
-            <div className="char-fan scale-90 md:scale-100">
-              {characters.map((c, i) => (
-                <div
-                  key={c.id}
-                  className={`nft-card cf${i + 1}`}
-                  style={{ background: c.tint }}
-                >
-                  <img src={c.img} alt={c.name} className="w-full h-full object-cover" />
+            <div className="relative w-full max-w-md rounded-3xl overflow-hidden bg-[#16291A] border-2 border-[#F2C829] p-8 md:p-9 shadow-[0_30px_60px_-30px_rgba(242,200,41,0.45)]">
+              <div
+                aria-hidden
+                className="absolute inset-0 opacity-25 pointer-events-none"
+                style={{
+                  backgroundImage:
+                    "radial-gradient(circle, rgba(247,233,196,0.18) 1px, transparent 1.6px)",
+                  backgroundSize: "22px 22px",
+                }}
+              />
+              <div className="absolute -top-12 -right-12 w-44 h-44 rounded-full bg-yellow-brand opacity-25 blur-3xl pointer-events-none" />
+
+              <div className="relative flex flex-col items-start">
+                <div className="w-12 h-12 rounded-xl bg-yellow-brand brand-forest flex items-center justify-center border-2 border-[#0d1a0d] shadow-[3px_3px_0_#0d1a0d]">
+                  <Ticket size={22} strokeWidth={2.5} />
                 </div>
-              ))}
+                <div className="mt-5 text-[11px] tracking-[0.32em] font-bold brand-yellow">
+                  GET WHITELISTED
+                </div>
+                <h3
+                  className="font-serif-display brand-cream mt-2"
+                  style={{ fontSize: "clamp(34px, 4vw, 52px)", lineHeight: 1.0 }}
+                >
+                  Claim Your Pass
+                </h3>
+                <p className="mt-3 text-[14.5px] leading-[1.6]" style={{ color: "#D9CFA8" }}>
+                  Complete a few quick tasks to unlock the application form and get a chance at a Swapped Pass (GTD).
+                </p>
+
+                <button
+                  onClick={() => setOpenApply(true)}
+                  className="btn-press btn-primary mt-6 inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-extrabold tracking-wide"
+                >
+                  <Sparkles size={18} strokeWidth={2.5} />
+                  Apply Here
+                </button>
+
+                <div className="mt-5 flex items-center gap-2 text-[12px]" style={{ color: "#A7D88A" }}>
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 pulse-dot" />
+                  Applications open · Limited spots
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Info Card + CTA */}
+        {/* Info Card */}
         <div className="relative mt-16 md:mt-20 grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
           <div className="lg:col-span-8">
             <div className="rounded-2xl border border-[#F2C829]/25 bg-[#16291A]/70 backdrop-blur-sm p-5 md:p-7">
@@ -98,20 +133,13 @@ const Hero = () => {
                       style={{ color: m.color || "#F4EBCC" }}
                     >
                       {m.value}
+                      {m.label === "PRICE" && (
+                        <span className="text-base ml-1" style={{ color: "#D9CFA8" }}>ETH</span>
+                      )}
                     </div>
                   </div>
                 ))}
               </div>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="mt-6 flex flex-col sm:flex-row gap-4">
-              <button className="btn-press btn-primary inline-flex items-center justify-center px-7 py-4 rounded-xl font-extrabold tracking-wide">
-                Twitter (coming soon)
-              </button>
-              <button className="btn-press btn-outline inline-flex items-center justify-center px-7 py-4 rounded-xl font-extrabold tracking-wide">
-                Join Discord (soon)
-              </button>
             </div>
           </div>
 
@@ -122,6 +150,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      <ApplyModal open={openApply} onClose={() => setOpenApply(false)} />
     </section>
   );
 };

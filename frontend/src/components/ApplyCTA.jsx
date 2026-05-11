@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import { ApplyModal } from "./ApplyModal";
+import React from "react";
+import { Twitter, MessagesSquare } from "lucide-react";
 import { logoImg } from "../mock.js";
 
 const ApplyCTA = () => {
-  const [open, setOpen] = useState(false);
   return (
     <section className="relative bg-forest overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-14 py-20 md:py-24">
@@ -12,7 +11,8 @@ const ApplyCTA = () => {
             aria-hidden
             className="absolute inset-0 opacity-30"
             style={{
-              backgroundImage: "radial-gradient(circle, rgba(247,233,196,0.18) 1px, transparent 1.6px)",
+              backgroundImage:
+                "radial-gradient(circle, rgba(247,233,196,0.18) 1px, transparent 1.6px)",
               backgroundSize: "22px 22px",
             }}
           />
@@ -30,21 +30,26 @@ const ApplyCTA = () => {
               className="font-serif-display brand-cream mt-4"
               style={{ fontSize: "clamp(34px, 5vw, 64px)", lineHeight: 1.05 }}
             >
-              Claim Your Pass
+              Join the Community
             </h2>
             <p className="mt-4 text-[15px] md:text-[17px] max-w-2xl mx-auto" style={{ color: "#D9CFA8" }}>
-              Complete the following steps in order to get a chance for a Swapped Pass (GTD).
+              Follow the journey of the Swapped souls. Be the first to hear lore drops, mint updates, and exclusive
+              giveaways.
             </p>
-            <button
-              onClick={() => setOpen(true)}
-              className="btn-press btn-primary mt-8 inline-flex items-center justify-center px-9 py-4 rounded-xl font-extrabold tracking-wide"
-            >
-              Apply Here
-            </button>
+
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 items-center justify-center">
+              <button className="btn-press btn-primary inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-extrabold tracking-wide">
+                <Twitter size={18} strokeWidth={2.5} />
+                Twitter (coming soon)
+              </button>
+              <button className="btn-press btn-outline inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-extrabold tracking-wide">
+                <MessagesSquare size={18} strokeWidth={2.5} />
+                Join Discord (soon)
+              </button>
+            </div>
           </div>
         </div>
       </div>
-      <ApplyModal open={open} onClose={() => setOpen(false)} />
     </section>
   );
 };

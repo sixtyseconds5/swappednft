@@ -28,7 +28,7 @@ const Footer = () => {
         </div>
         <div className="md:text-right">
           <p className="text-[13px]" style={{ color: "#D9CFA8" }}>© 2026 SWAPPED CHARACTER. All rights reserved.</p>
-          <p className="text-[13px] mt-2" style={{ color: "#D9CFA8" }}>Ethereum • 222 NFTS • Free Mint</p>
+          <p className="text-[13px] mt-2" style={{ color: "#D9CFA8" }}>Ethereum • 333 NFTS • 0.001 ETH</p>
         </div>
       </div>
     </footer>
