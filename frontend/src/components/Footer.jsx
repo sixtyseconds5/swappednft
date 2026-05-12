@@ -8,7 +8,7 @@ const Footer = () => {
         <div>
           <img src={logoImg} alt="SWAPPED" className="logo-img h-10 w-auto" />
           <p className="mt-4 text-[14px] max-w-xs" style={{ color: "#D9CFA8" }}>
-            A small, curated NFT story — 222 Swapped Characters on Ethereum.
+            A small, curated NFT story — 333 Swapped Characters on Ethereum.
           </p>
         </div>
         <div>
