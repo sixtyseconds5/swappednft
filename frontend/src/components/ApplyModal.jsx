@@ -22,7 +22,7 @@ const tasks = [
   {
     id: 3,
     label: "Retweet the Pinned Post",
-    desc: "Retweet our pinned post.",
+    desc: "Retweet our pinned post, then return and confirm.",
     cta: "Open Post",
     icon: "repeat",
     href: "https://x.com/SwappedNFT",
@@ -44,6 +44,7 @@ export const ApplyModal = ({ open, onClose }) => {
   const [wallet, setWallet] = useState("");
   const [twitter, setTwitter] = useState("");
   const [showUsernameInput, setShowUsernameInput] = useState(false);
+  const [showRetweetConfirm, setShowRetweetConfirm] = useState(false);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -67,6 +68,12 @@ export const ApplyModal = ({ open, onClose }) => {
       return;
     }
 
+    if (task.id === 3) {
+      setShowRetweetConfirm(true);
+      toast.info("After retweeting, return here and confirm");
+      return;
+    }
+
     setTaskState(task.id, "done");
     toast.success("Task completed");
   };
@@ -80,6 +87,12 @@ export const ApplyModal = ({ open, onClose }) => {
     setTaskState(1, "done");
     setShowUsernameInput(false);
     toast.success("X username confirmed. Next task unlocked!");
+  };
+
+  const handleConfirmRetweet = () => {
+    setTaskState(3, "done");
+    setShowRetweetConfirm(false);
+    toast.success("Retweet confirmed!");
   };
 
   const handleWhitelistSubmit = async () => {
@@ -141,16 +154,27 @@ export const ApplyModal = ({ open, onClose }) => {
             const isLocked = t.id !== 1 && state[1] !== "done";
 
             return (
-              <div key={t.id} className={`rounded-xl bg-[#16291A] border border-[#F2C829]/20 p-3.5 ${isLocked ? "opacity-50" : ""}`}>
+              <div
+                key={t.id}
+                className={`rounded-xl bg-[#16291A] border border-[#F2C829]/20 p-3.5 ${
+                  isLocked ? "opacity-50" : ""
+                }`}
+              >
                 <div className="flex items-center justify-between gap-3">
                   <div className="flex items-center gap-3">
-                    <div className={`w-9 h-9 rounded-lg flex items-center justify-center ${isDone ? "bg-emerald-500 text-white" : "bg-yellow-brand brand-forest"}`}>
+                    <div
+                      className={`w-9 h-9 rounded-lg flex items-center justify-center ${
+                        isDone ? "bg-emerald-500 text-white" : "bg-yellow-brand brand-forest"
+                      }`}
+                    >
                       {isDone ? <Check size={18} /> : <Icon size={18} />}
                     </div>
 
                     <div>
                       <div className="text-[14px] font-semibold brand-cream">{t.label}</div>
-                      <div className="text-[12px]" style={{ color: "#A39871" }}>{t.desc}</div>
+                      <div className="text-[12px]" style={{ color: "#A39871" }}>
+                        {t.desc}
+                      </div>
                     </div>
                   </div>
 
@@ -189,12 +213,29 @@ export const ApplyModal = ({ open, onClose }) => {
                     </button>
                   </div>
                 )}
+
+                {t.id === 3 && showRetweetConfirm && !isDone && (
+                  <div className="mt-4">
+                    <button
+                      onClick={handleConfirmRetweet}
+                      className="btn-press inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-yellow-brand brand-forest font-bold w-full"
+                    >
+                      I Have Retweeted
+                    </button>
+                  </div>
+                )}
               </div>
             );
           })}
         </div>
 
-        <div className={`mt-6 rounded-xl p-5 text-center ${allDone ? "bg-emerald-900/40 border border-emerald-500/60" : "bg-[#16291A] border border-[#F2C829]/20"}`}>
+        <div
+          className={`mt-6 rounded-xl p-5 text-center ${
+            allDone
+              ? "bg-emerald-900/40 border border-emerald-500/60"
+              : "bg-[#16291A] border border-[#F2C829]/20"
+          }`}
+        >
           {allDone ? (
             <>
               <div className="flex items-center justify-center gap-2 mb-2 text-emerald-300">
