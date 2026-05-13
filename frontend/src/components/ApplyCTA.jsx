@@ -50,7 +50,7 @@ const ApplyCTA = () => {
 
               <button className="btn-press btn-outline inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-extrabold tracking-wide">
                 <MessagesSquare size={18} strokeWidth={2.5} />
-                Join Discord (soon)
+                Join Discord
               </button>
             </div>
           </div>
