@@ -90,22 +90,8 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Meet the four + Apply CTA card */}
-        <div className="relative mt-20 md:mt-28 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-6 relative">
-            <div className="text-[12px] tracking-[0.32em] font-bold text-amber-warm mb-3">
-              MEET THE FOUR
-            </div>
-            <h2
-              className="font-serif-display brand-cream"
-              style={{ fontSize: "clamp(56px, 8vw, 110px)", lineHeight: 0.95 }}
-            >
-              Four lives,<br />one twist.
-            </h2>
-            <p className="mt-6 max-w-md text-[15px] md:text-[16px] leading-[1.6]" style={{ color: "#D9CFA8" }}>
-              When worlds collide and souls cross over, something extraordinary happens. Meet the cast at the heart of the Swapped story.
-            </p>
-          </div>
+      
+        
 
           {/* Apply CTA card */}
           <div className="lg:col-span-6 flex justify-center lg:justify-end">
