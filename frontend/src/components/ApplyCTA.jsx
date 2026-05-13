@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Twitter, MessagesSquare } from "lucide-react";
 import { logoImg } from "../mock.js";
@@ -39,10 +38,16 @@ const ApplyCTA = () => {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 items-center justify-center">
-              <button className="btn-press btn-primary inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-extrabold tracking-wide">
+              <a
+                href="https://x.com/SwappedNFT"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-press btn-primary inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-extrabold tracking-wide"
+              >
                 <Twitter size={18} strokeWidth={2.5} />
-                Twitter (coming soon)
-              </button>
+                Twitter
+              </a>
+
               <button className="btn-press btn-outline inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-extrabold tracking-wide">
                 <MessagesSquare size={18} strokeWidth={2.5} />
                 Join Discord (soon)
