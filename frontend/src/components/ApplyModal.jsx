@@ -22,7 +22,7 @@ const tasks = [
   {
     id: 3,
     label: "Retweet the Pinned Post",
-    desc: "Retweet our pinned post, then return and confirm.",
+    desc: "Retweet our pinned post, then return and paste your retweet link.",
     cta: "Open Post",
     icon: "repeat",
     href: "https://x.com/SwappedNFT",
@@ -43,8 +43,9 @@ export const ApplyModal = ({ open, onClose }) => {
   const [state, setState] = useState({});
   const [wallet, setWallet] = useState("");
   const [twitter, setTwitter] = useState("");
+  const [retweetLink, setRetweetLink] = useState("");
   const [showUsernameInput, setShowUsernameInput] = useState(false);
-  const [showRetweetConfirm, setShowRetweetConfirm] = useState(false);
+  const [showRetweetInput, setShowRetweetInput] = useState(false);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -69,8 +70,8 @@ export const ApplyModal = ({ open, onClose }) => {
     }
 
     if (task.id === 3) {
-      setShowRetweetConfirm(true);
-      toast.info("After retweeting, return here and confirm");
+      setShowRetweetInput(true);
+      toast.info("After retweeting, return here and paste your retweet link");
       return;
     }
 
@@ -90,9 +91,14 @@ export const ApplyModal = ({ open, onClose }) => {
   };
 
   const handleConfirmRetweet = () => {
+    if (!retweetLink.trim()) {
+      toast.error("Please paste your retweet/repost link");
+      return;
+    }
+
     setTaskState(3, "done");
-    setShowRetweetConfirm(false);
-    toast.success("Retweet confirmed!");
+    setShowRetweetInput(false);
+    toast.success("Retweet link confirmed!");
   };
 
   const handleWhitelistSubmit = async () => {
@@ -109,6 +115,7 @@ export const ApplyModal = ({ open, onClose }) => {
           body: new URLSearchParams({
             wallet: wallet,
             twitter: twitter,
+            retweetLink: retweetLink,
           }),
         }
       );
@@ -117,6 +124,7 @@ export const ApplyModal = ({ open, onClose }) => {
         toast.success("Successfully Joined Whitelist");
         setWallet("");
         setTwitter("");
+        setRetweetLink("");
       } else {
         toast.error("Failed to submit");
       }
@@ -214,13 +222,20 @@ export const ApplyModal = ({ open, onClose }) => {
                   </div>
                 )}
 
-                {t.id === 3 && showRetweetConfirm && !isDone && (
-                  <div className="mt-4">
+                {t.id === 3 && showRetweetInput && !isDone && (
+                  <div className="mt-4 flex flex-col gap-2">
+                    <input
+                      type="text"
+                      value={retweetLink}
+                      onChange={(e) => setRetweetLink(e.target.value)}
+                      placeholder="Paste your retweet/repost link"
+                      className="w-full rounded-lg bg-[#0d1a0d] border border-[#F2C829]/30 px-4 py-3 text-[14px] brand-cream outline-none placeholder-[#5e6b50]"
+                    />
                     <button
                       onClick={handleConfirmRetweet}
-                      className="btn-press inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-yellow-brand brand-forest font-bold w-full"
+                      className="btn-press inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-yellow-brand brand-forest font-bold"
                     >
-                      I Have Retweeted
+                      Confirm Retweet Link
                     </button>
                   </div>
                 )}
