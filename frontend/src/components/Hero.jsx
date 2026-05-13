@@ -90,10 +90,7 @@ const Hero = () => {
           </div>
         </div>
 
-      
-        
-
-          {/* Apply CTA card */}
+        {/* Apply CTA card */}
           <div className="lg:col-span-6 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-md rounded-3xl overflow-hidden bg-[#16291A] border-2 border-[#F2C829] p-8 md:p-9 shadow-[0_30px_60px_-30px_rgba(242,200,41,0.45)]">
               <div
