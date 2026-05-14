@@ -132,7 +132,7 @@ const Hero = () => {
 
                 <div className="mt-5 flex items-center gap-2 text-[12px]" style={{ color: "#A7D88A" }}>
                   <span className="w-2 h-2 rounded-full bg-emerald-400 pulse-dot" />
-                  Whitelist launching soon
+                  Applications open · Limited spots
                 </div>
               </div>
             </div>
