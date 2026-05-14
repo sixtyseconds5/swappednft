@@ -26,7 +26,7 @@ export const synopsis =
 
 export const mintInfo = [
   { label: "MINT DATE", value: "TBA", pulse: true },
-  { label: "PRICE", value: "0.001", color: "#F2C829", suffix: "ETH" },
+  { label: "PRICE", value: "FREE MINT", color: "#F2C829", suffix: "ETH" },
   { label: "SUPPLY", value: "333", color: "#F4EBCC" },
   { label: "CHAIN", value: "ETHEREUM", color: "#A7D88A" },
 ];
@@ -118,7 +118,7 @@ export const faqs = [
   },
   {
     q: "What is the mint price?",
-    a: "Mint price is tiered based on your access:\n\n\u2022 0.0005 ETH for GTD (Guaranteed)\n\u2022 0.001 ETH for FCFS (First Come, First Served)\n\u2022 0.001 ETH for PUBLIC\n\nMaximum 2 mints per wallet during the WL window. Plus standard Ethereum gas fees.",
+    a: "Mint price is tiered based on your access:\n\n\u2022 FREE MINT for GTD (Guaranteed)\n\u2022 FREE MINT for FCFS (First Come, First Served)\n\u2022 FREE MINT for PUBLIC\n\nMaximum 2 mints per wallet during the WL window. Plus standard Ethereum gas fees.",
   },
   {
     q: "How will the WL distribution work?",
@@ -142,12 +142,12 @@ export const faqs = [
   },
   {
     q: "Is there a roadmap?",
-    a: "Yes \u2014 a soft one, kept honest:\n\n/Phase 0: Mint of 333 Swapped Characters on Ethereum (0.001 ETH), community formation.\n/Phase 1: Continuous art + lore drops to deepen each character.\n/Phase 2: Animated shorts and collaborative story chapters with holders.\n/Phase 3: A connected second collection within the Swapped universe.\n/Phase 4: Ongoing evolution \u2014 driven by the people who hold the story.\n\nNo fake promises. Just souls in motion.",
+    a: "Yes \u2014 a soft one, kept honest:\n\n/Phase 0: Mint of 333 Swapped Characters on Ethereum (FREE), community formation.\n/Phase 1: Continuous art + lore drops to deepen each character.\n/Phase 2: Animated shorts and collaborative story chapters with holders.\n/Phase 3: A connected second collection within the Swapped universe.\n/Phase 4: Ongoing evolution \u2014 driven by the people who hold the story.\n\nNo fake promises. Just souls in motion.",
   },
 ];
 
 export const footerLinks = [
-  { label: "Twitter (soon)", href: "#" },
+  { label: "Twitter", href: "#" },
   { label: "Discord (soon)", href: "#" },
   { label: "OpenSea (soon)", href: "#" },
   { label: "Roadmap", href: "#" },
