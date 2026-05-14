@@ -17,7 +17,7 @@ const tasks = [
     desc: "Open the pinned post and click Like.",
     cta: "Open Post",
     icon: "heart",
-    href: "https://x.com/SwappedNFT",
+    href: "https://x.com/i/status/2054922564401762422",
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const tasks = [
     desc: "Retweet our pinned post, then return and paste your retweet link.",
     cta: "Open Post",
     icon: "repeat",
-    href: "https://x.com/SwappedNFT",
+    href: "https://x.com/i/status/2054922564401762422",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const tasks = [
     desc: "Drop a comment under the pinned post.",
     cta: "Open Post",
     icon: "message",
-    href: "https://x.com/SwappedNFT",
+    href: "https://x.com/i/status/2054922564401762422",
   },
 ];
 
