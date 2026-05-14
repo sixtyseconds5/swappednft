@@ -26,7 +26,7 @@ export const synopsis =
 
 export const mintInfo = [
   { label: "MINT DATE", value: "TBA", pulse: true },
-  { label: "PRICE", value: "FREE MINT", color: "#F2C829", suffix: "ETH" },
+  { label: "PRICE", value: "FREE MINT", color: "#F2C829", suffix: "" },
   { label: "SUPPLY", value: "333", color: "#F4EBCC" },
   { label: "CHAIN", value: "ETHEREUM", color: "#A7D88A" },
 ];
