@@ -123,11 +123,11 @@ const Hero = () => {
                 </p>
 
 <button
-  disabled
-  className="btn-press btn-primary mt-6 inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-extrabold tracking-wide opacity-70 cursor-not-allowed"
+  onClick={() => setOpenApply(true)}
+  className="btn-press btn-primary mt-6 inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-extrabold tracking-wide"
 >
   <Sparkles size={18} strokeWidth={2.5} />
-  Coming soon
+  Apply Here
 </button>
 
                 <div className="mt-5 flex items-center gap-2 text-[12px]" style={{ color: "#A7D88A" }}>
