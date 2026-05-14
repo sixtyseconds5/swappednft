@@ -18,7 +18,7 @@ const Header = () => {
             CHARACTER · 333
           </div>
           <div className="text-[10px] md:text-[11px] text-[#E6B85A] tracking-[0.28em] mt-1">
-            0.001 ETH · MINT TBA
+            FREE · MINT TBA
           </div>
         </div>
       </div>
