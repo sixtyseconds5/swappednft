@@ -157,7 +157,7 @@ const Hero = () => {
                       style={{
                         color: m.color || "#F4EBCC",
                         fontSize:
-                          m.value === "ETHEREUM"
+                          m.value === "Robinhood Chain"
                             ? "clamp(20px, 2.2vw, 28px)"
                             : "clamp(28px, 3.4vw, 40px)",
                       }}
