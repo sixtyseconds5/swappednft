@@ -8,7 +8,7 @@ const Footer = () => {
         <div>
           <img src={logoImg} alt="SWAPPED" className="logo-img h-10 w-auto" />
           <p className="mt-4 text-[14px] max-w-xs" style={{ color: "#D9CFA8" }}>
-            A small, curated NFT story — 333 Swapped Characters on Ethereum.
+            A small, curated NFT story — 333 Swapped Characters on Robinhood Chain.
           </p>
         </div>
         <div>
@@ -28,7 +28,7 @@ const Footer = () => {
         </div>
         <div className="md:text-right">
           <p className="text-[13px]" style={{ color: "#D9CFA8" }}>© 2026 SWAPPED CHARACTER. All rights reserved.</p>
-          <p className="text-[13px] mt-2" style={{ color: "#D9CFA8" }}>Ethereum • 333 NFTS • FREE MINT</p>
+          <p className="text-[13px] mt-2" style={{ color: "#D9CFA8" }}>Robinhood Chain • 333 NFTS • FREE MINT</p>
         </div>
       </div>
     </footer>
